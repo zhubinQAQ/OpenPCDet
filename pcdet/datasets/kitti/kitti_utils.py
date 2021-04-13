@@ -11,6 +11,7 @@ def transform_annotations_to_kitti_format(annos, map_name_to_kitti=None, info_wi
     Returns:
 
     """
+    # 把标注转换为kitti的格式
     for anno in annos:
         for k in range(anno['name'].shape[0]):
             anno['name'][k] = map_name_to_kitti[anno['name'][k]]
